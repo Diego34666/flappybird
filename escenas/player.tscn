@@ -55,7 +55,8 @@ radius = 14.5602
 [sub_resource type="RectangleShape2D" id="RectangleShape2D_i3pqv"]
 size = Vector2(35, 30)
 
-[node name="player" type="RigidBody2D"]
+[node name="player" type="RigidBody2D" groups=["player"]]
+modulate = Color(1, 1, 0.180392, 1)
 script = ExtResource("1_k4kro")
 
 [node name="AnimatedSprite2D" type="AnimatedSprite2D" parent="."]
