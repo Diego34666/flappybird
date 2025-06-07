@@ -5,47 +5,32 @@
 [ext_resource type="Texture2D" uid="uid://ciy4kex72rq2m" path="res://FBsprites/bluebird-midflap.png" id="3_t3yu4"]
 [ext_resource type="Texture2D" uid="uid://dcg1nvq7ex14x" path="res://FBsprites/bluebird-upflap.png" id="4_r4hsq"]
 
-[sub_resource type="AtlasTexture" id="AtlasTexture_2hs0m"]
-atlas = ExtResource("2_6nxto")
-region = Rect2(0, 0, 34, 24)
-
-[sub_resource type="AtlasTexture" id="AtlasTexture_1jxqw"]
-atlas = ExtResource("3_t3yu4")
-region = Rect2(0, 0, 34, 24)
-
 [sub_resource type="AtlasTexture" id="AtlasTexture_dw050"]
 atlas = ExtResource("4_r4hsq")
 region = Rect2(0, 0, 34, 24)
 
+[sub_resource type="AtlasTexture" id="AtlasTexture_k4kro"]
+atlas = ExtResource("3_t3yu4")
+region = Rect2(0, 0, 34, 24)
+
+[sub_resource type="AtlasTexture" id="AtlasTexture_6nxto"]
+atlas = ExtResource("2_6nxto")
+region = Rect2(0, 0, 34, 24)
+
 [sub_resource type="SpriteFrames" id="SpriteFrames_b26j0"]
 animations = [{
-"frames": [],
-"loop": true,
-"name": &"default",
-"speed": 5.0
-}, {
-"frames": [{
-"duration": 1.0,
-"texture": SubResource("AtlasTexture_2hs0m")
-}],
-"loop": true,
-"name": &"down",
-"speed": 5.0
-}, {
-"frames": [{
-"duration": 1.0,
-"texture": SubResource("AtlasTexture_1jxqw")
-}],
-"loop": true,
-"name": &"mid",
-"speed": 5.0
-}, {
 "frames": [{
 "duration": 1.0,
 "texture": SubResource("AtlasTexture_dw050")
+}, {
+"duration": 1.0,
+"texture": SubResource("AtlasTexture_k4kro")
+}, {
+"duration": 1.0,
+"texture": SubResource("AtlasTexture_6nxto")
 }],
 "loop": true,
-"name": &"up",
+"name": &"move",
 "speed": 5.0
 }]
 
@@ -61,7 +46,7 @@ script = ExtResource("1_k4kro")
 
 [node name="AnimatedSprite2D" type="AnimatedSprite2D" parent="."]
 sprite_frames = SubResource("SpriteFrames_b26j0")
-animation = &"down"
+animation = &"move"
 
 [node name="CollisionShape2D" type="CollisionShape2D" parent="."]
 shape = SubResource("CircleShape2D_n7ghd")
