@@ -1,4 +1,4 @@
-[gd_scene load_steps=10 format=3 uid="uid://6bbcl2rd646f"]
+[gd_scene load_steps=11 format=3 uid="uid://6bbcl2rd646f"]
 
 [ext_resource type="Script" uid="uid://4jht154uxdwh" path="res://script/game.gd" id="1_6qgwm"]
 [ext_resource type="Texture2D" uid="uid://bp8ylueanynyk" path="res://FBsprites/base.png" id="1_80nbo"]
@@ -6,6 +6,7 @@
 [ext_resource type="PackedScene" uid="uid://cprkf2cyje5ql" path="res://escenas/parallax_background.tscn" id="4_p8hra"]
 [ext_resource type="Script" uid="uid://7g8ov7sxn6wl" path="res://script/mensaje.gd" id="5_6kmlf"]
 [ext_resource type="Texture2D" uid="uid://bn83we6gmhhvu" path="res://FBsprites/message.png" id="5_sa5h6"]
+[ext_resource type="Texture2D" uid="uid://de3hegqvsvx7t" path="res://FBsprites/gameover.png" id="7_3lvuv"]
 
 [sub_resource type="RectangleShape2D" id="RectangleShape2D_e2o6t"]
 size = Vector2(391, 57)
@@ -64,9 +65,14 @@ vertical_alignment = 1
 
 [node name="mensaje" type="Sprite2D" parent="."]
 process_mode = 3
-position = Vector2(196.5, 281.75)
-scale = Vector2(1.14674, 1.38015)
+position = Vector2(198, 287.625)
+scale = Vector2(1.14674, 1.29307)
 texture = ExtResource("5_sa5h6")
 script = ExtResource("5_6kmlf")
+
+[node name="game_over" type="Sprite2D" parent="mensaje"]
+position = Vector2(0, -169.461)
+scale = Vector2(1, 1.19685)
+texture = ExtResource("7_3lvuv")
 
 [connection signal="timeout" from="Timer" to="." method="_on_timer_timeout"]

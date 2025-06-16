@@ -8,3 +8,4 @@ func _input(event: InputEvent) -> void:
 		$".".hide()
 	else:
 		$".".hide()
+		$game_over.hide()
