@@ -1,15 +1,21 @@
-[gd_scene load_steps=7 format=3 uid="uid://6bbcl2rd646f"]
+[gd_scene load_steps=10 format=3 uid="uid://6bbcl2rd646f"]
 
 [ext_resource type="Script" uid="uid://4jht154uxdwh" path="res://script/game.gd" id="1_6qgwm"]
 [ext_resource type="Texture2D" uid="uid://bp8ylueanynyk" path="res://FBsprites/base.png" id="1_80nbo"]
 [ext_resource type="PackedScene" uid="uid://dxvvb7krc5c34" path="res://escenas/player.tscn" id="2_62eqe"]
 [ext_resource type="PackedScene" uid="uid://cprkf2cyje5ql" path="res://escenas/parallax_background.tscn" id="4_p8hra"]
+[ext_resource type="Script" uid="uid://7g8ov7sxn6wl" path="res://script/mensaje.gd" id="5_6kmlf"]
+[ext_resource type="Texture2D" uid="uid://bn83we6gmhhvu" path="res://FBsprites/message.png" id="5_sa5h6"]
 
 [sub_resource type="RectangleShape2D" id="RectangleShape2D_e2o6t"]
 size = Vector2(391, 57)
 
 [sub_resource type="RectangleShape2D" id="RectangleShape2D_feb5d"]
 size = Vector2(388, 105)
+
+[sub_resource type="LabelSettings" id="LabelSettings_p8hra"]
+font_size = 40
+font_color = Color(0, 0, 0, 1)
 
 [node name="game" type="Node2D"]
 script = ExtResource("1_6qgwm")
@@ -44,5 +50,23 @@ wait_time = 3.0
 autostart = true
 
 [node name="ParallaxBackground" parent="." instance=ExtResource("4_p8hra")]
+
+[node name="Label" type="Label" parent="."]
+z_index = 1
+offset_left = 16.0
+offset_top = 28.0
+offset_right = 56.0
+offset_bottom = 83.0
+text = "0"
+label_settings = SubResource("LabelSettings_p8hra")
+horizontal_alignment = 1
+vertical_alignment = 1
+
+[node name="mensaje" type="Sprite2D" parent="."]
+process_mode = 3
+position = Vector2(196.5, 281.75)
+scale = Vector2(1.14674, 1.38015)
+texture = ExtResource("5_sa5h6")
+script = ExtResource("5_6kmlf")
 
 [connection signal="timeout" from="Timer" to="." method="_on_timer_timeout"]

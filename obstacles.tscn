@@ -19,6 +19,7 @@ script = ExtResource("1_g48ay")
 [node name="tuberia_1" type="Area2D" parent="."]
 
 [node name="Sprite2D" type="Sprite2D" parent="tuberia_1"]
+modulate = Color(1, 0.0156863, 1, 1)
 position = Vector2(189, -36)
 rotation = 3.14159
 scale = Vector2(1, 1.32537)
@@ -31,6 +32,7 @@ shape = SubResource("RectangleShape2D_wh1ty")
 [node name="tuberia_2" type="Area2D" parent="."]
 
 [node name="Sprite2D" type="Sprite2D" parent="tuberia_2"]
+modulate = Color(1, 0.0627451, 0.00392157, 1)
 position = Vector2(190, 541)
 scale = Vector2(1, 1.43125)
 texture = ExtResource("2_v3q82")

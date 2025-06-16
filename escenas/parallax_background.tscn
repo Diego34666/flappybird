@@ -14,6 +14,7 @@ script = ExtResource("1_8ybvi")
 motion_mirroring = Vector2(362, 0)
 
 [node name="Sprite2D" type="Sprite2D" parent="ParallaxLayer"]
+modulate = Color(0.607843, 0.290196, 1, 1)
 position = Vector2(394.5, 451)
 scale = Vector2(0.713158, 0.75)
 texture = ExtResource("1_a2r1x")
@@ -23,6 +24,7 @@ motion_scale = Vector2(0.8, 0.8)
 motion_mirroring = Vector2(362, 0)
 
 [node name="Sprite2D" type="Sprite2D" parent="ParallaxLayer5"]
+modulate = Color(1, 0, 1, 1)
 position = Vector2(210, 411)
 scale = Vector2(0.106316, 0.340833)
 texture = ExtResource("2_8ybvi")
@@ -32,6 +34,7 @@ motion_scale = Vector2(0.6, 0.6)
 motion_mirroring = Vector2(362, 0)
 
 [node name="Sprite2D" type="Sprite2D" parent="ParallaxLayer4"]
+modulate = Color(1, 0.545098, 0.913725, 1)
 position = Vector2(194.5, 376)
 scale = Vector2(0.104474, 0.378333)
 texture = ExtResource("3_b5ap6")
@@ -41,6 +44,7 @@ motion_scale = Vector2(0.4, 0.4)
 motion_mirroring = Vector2(362, 0)
 
 [node name="Sprite2D" type="Sprite2D" parent="ParallaxLayer3"]
+modulate = Color(1, 0.313726, 1, 1)
 position = Vector2(198.5, 405.5)
 scale = Vector2(0.102368, 0.309167)
 texture = ExtResource("4_6v165")
@@ -50,6 +54,7 @@ motion_scale = Vector2(0.2, 0.2)
 motion_mirroring = Vector2(362, 0)
 
 [node name="Sprite2D" type="Sprite2D" parent="ParallaxLayer2"]
+modulate = Color(1, 0.266667, 1, 1)
 position = Vector2(196, 375)
 scale = Vector2(0.104737, 0.228333)
 texture = ExtResource("5_bi7br")
